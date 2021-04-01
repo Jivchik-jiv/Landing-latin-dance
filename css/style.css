@@ -1,3 +1,69 @@
 * {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("../fonts/");
+  src: url("../fonts/?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Proxima Nova Light", sans-serif;
+  color: #f0f0f0;
+}
+
+.navbar {
+  background-color: #000000;
+}
+.navbar-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+.navbar-wrap .logo img {
+  width: 100px;
+}
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  flex-direction: column;
+  height: 50px;
+  width: 40px;
+  border: none;
+}
+.menu-button__line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #e45dcd;
+  margin: 2px 0;
+}
+
+.action {
+  background: #000000 url("../../img/hero/photo_1.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 25px;
+  padding-left: 20px;
+  min-height: 170px;
+}
+.action h1 {
+  margin: 5px;
+  font-size: 1em;
 }/*# sourceMappingURL=style.css.map */
