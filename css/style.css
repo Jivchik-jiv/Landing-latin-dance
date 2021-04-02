@@ -25,6 +25,8 @@ body {
   font-family: "Proxima Nova Light", sans-serif;
   color: #f0f0f0;
   background-color: #000;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .header-wrap {
@@ -37,6 +39,29 @@ body {
   width: 100px;
 }
 
+.navbar {
+  display: flex;
+}
+.navbar-phone-number {
+  margin: 15px;
+  display: none;
+}
+.navbar-phone-number__link {
+  color: #fff;
+  background: url("../../img/icons/phone-icon.png") no-repeat;
+  background-size: 20px;
+  padding-left: 25px;
+  text-decoration: none;
+}
+.navbar-social {
+  display: none;
+}
+.navbar-social__link {
+  margin: 15px 7px;
+}
+.navbar-social__img {
+  width: 20px;
+}
 .navbar-menu {
   position: fixed;
   top: 54px;
@@ -82,10 +107,7 @@ body {
   margin: 2px 0;
 }
 
-@media (min-width: 415px) {
-  .navbar {
-    width: 100%;
-  }
+@media (min-width: 610px) {
   .navbar-menu {
     z-index: 0;
     position: relative;
@@ -94,10 +116,12 @@ body {
   }
   .navbar-menu__nav {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding-left: 0;
   }
   .navbar-menu__link {
-    display: block;
+    margin-top: 0;
+    margin-left: 10px;
   }
 
   .menu-button {
@@ -105,7 +129,17 @@ body {
   }
 
   .header-wrap {
-    justify-content: flex-start;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  .navbar-phone-number {
+    display: block;
+  }
+}
+@media (min-width: 925px) {
+  .navbar-social {
+    display: flex;
   }
 }
 .action {
