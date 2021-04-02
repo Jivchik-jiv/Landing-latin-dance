@@ -1,5 +1,4 @@
-.navbar
-    background-color: #000000
+.header
     &-wrap
         display: flex
         justify-content: space-between
@@ -7,53 +6,71 @@
         min-height: 70px
         .logo img
             width: 100px
-    &__menu-button
-        outline: 0
         
 
 
+.navbar
+    &-menu
+        position: fixed
+        top: 54px
+        left: 0
+        width: 100%
+        z-index: 0
+        transform: translateY(-200%)
+        &_active
+            transform: translateY(0)
+        &__nav
+            background-color: #000000
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding: 20px
+        &__link
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 0.7em
+            color: #e45dcd
+            margin-top: 10px
+            text-align: right
 
-.menu
-    position: fixed
-    top: 54px
-    width: 100%
-    z-index: -1
-    transform: translateY(-100%)
-    &_active
-        transform: translateY(0)
-    &__nav
-        background-color: #000000
-        display: flex
-        flex-direction: column
-        padding: 20px
+.menu-button
+   display: flex
+   align-items: center
+   justify-content: center
+   background-color: transparent
+   flex-direction: column
+   height: 50px
+   width: 40px
+   border: none
+   &__line
+       display: block
+       width: 30px
+       height: 3px
+       background-color: #e45dcd
+       margin: 2px 0
+
+
+@media (min-width: 415px)
+    .navbar
+        width: 100%
+        &-menu
+            z-index: 0
+            position: relative
+            top: 0
+            left: 0
         
+            &__nav
+                flex-direction: row
+                justify-content: space-around
+            &__link
+                display: block
 
-    &__link
-        text-decoration: none
-        text-transform: uppercase
-        font-size: 0.7em
-        color: #e45dcd
-        margin-top: 10px
-        text-align: right
-
-    &-button
-        display: flex
-        align-items: center
-        justify-content: center
-        background-color: transparent
-        flex-direction: column
-        height: 50px
-        width: 40px
-        border: none
-        &__line
-            display: block
-            width: 30px
-            height: 3px
-            background-color: #e45dcd
-            margin: 2px 0
-            
-
-
+    .menu-button
+        display: none
+    .header
+         &-wrap
+            justify-content: flex-start
+      
 
 
         
