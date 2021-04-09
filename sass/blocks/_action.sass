@@ -1,9 +1,10 @@
 .action
-    background: #000000 url('../../img/hero/photo_1.jpg') no-repeat center
+    position: relative
+    background: url('../../img/action/photo_1.jpg') no-repeat center #000000 
     background-size: cover
     padding-top: 25px
     padding-left: 20px
-    min-height: 170px
+    min-height: 200px
     &-title
         margin:5px 
         font-size: 1em
@@ -21,11 +22,30 @@
             box-shadow: 0 0 0 4px rgba(#fff, 0.5)
         &:active
             background-color: #ff1ead
+    &-modal
+        position: absolute
+        top: 30px
+        left: 30px
+        width: 250px
+        height: 100px
+        border: #fff solid 1px
+        background: #000000
+        padding: 10px 20px
 
 
-
-
-
-        
+@media (min-width: 610px)
+     .action
+        min-height: 350px
+        padding-top: 100px
+        padding-left: 40px
+        &-title
+            font-size: 1.5em
     
-   
+
+@media (min-width: 800px)
+    .action
+        min-height: 450px
+        padding-top: 100px
+        padding-left: 40px
+        &-title
+            font-size: 1.5em
