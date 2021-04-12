@@ -28,21 +28,22 @@
                     <a class="navbar-social__link" href="#" class="social__link"><img class="navbar-social__img"
                             src="img/icons/telegram.png" alt="instagram"></a>
                 </div>
+                <!-- /.navbar-menu_active  добавить стиль-->
                 <div class="navbar-menu">
                     <nav class="navbar-menu__nav">
-                        <!-- /.navbar-menu_active  добавить стиль-->
-                        <a href="" class="navbar-menu__link">Напрямки</a>
-                        <a href="" class="navbar-menu__link">Розклад</a>
-                        <a href="" class="navbar-menu__link">Ціни</a>
-                        <a href="" class="navbar-menu__link">Про нас</a>
-                        <a href="" class="navbar-menu__link">Відповіді на питання</a>
-                        <a href="" class="navbar-menu__link">Контакти</a>
+                        
+                        <a href="#styles" class="navbar-menu__link" onclick = "toggleMenu()">Напрямки</a>
+                        <a href="#schedule" class="navbar-menu__link" onclick = "toggleMenu()">Розклад</a>
+                        <a href="#price" class="navbar-menu__link" onclick = "toggleMenu()">Ціни</a>
+                        <a href="#about" class="navbar-menu__link" onclick = "toggleMenu()">Про нас</a>
+                        <a href="#qa" class="navbar-menu__link" onclick = "toggleMenu()">Відповіді на питання</a>
+                        <a href="contacts" class="navbar-menu__link" onclick = "toggleMenu()">Контакти</a>
                     </nav>
                 </div>
                 <!-- /.navbar-menu -->
             </div>
             <!-- /.navbar -->
-            <button class="menu-button">
+            <button class="menu-button" onclick = "toggleMenu()">
                 <span class="menu-button__line"></span>
                 <span class="menu-button__line"></span>
                 <span class="menu-button__line"></span>
@@ -54,80 +55,15 @@
     <main class="main">
         <div class="action">
             <h1 class="action-title">Отримай знижку на перше заняття</h1>
-            <button class="action-button">Записатися</button>
+            <button class="action-button" onclick = "showModal()">Записатися</button>
             <div class="action-modal hidden">
+                <button class="action-modal__hide-button" onclick= "hideModal()">X</button>
                 <h1>Test</h1>
+
             </div>
         </div>
         <!-- /.action -->
-        <div class="slider-wrap">
-            <!-- 
-            <h1>Напрямки</h1>
-            <div class="slider container">
-            <div class="slider-arrows">
-                    <button type = "button" class = "slider-arrows-prev">&#5176;</button>
-                    <button type = "button" class = "slider-arrows-next">&#5171;</button>
-                </div>
-            
-                <div class="slider-sliderList">
-                    <div class="slider-sliderTrack">
-                        <div class= "slider-slide">
-                            <img src="img/slider/test1.jpg" alt="">
-                            <div class="slider-slide-text">
-                                <h2>Title 1</h2>
-                                <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text1</p>
-                            </div>
-                        </div>
-                        <div class= "slider-slide">
-                            <img src="img/slider/test1.jpg" alt="">
-                            <div class="slider-slide-text">
-                                <h2>Title 2</h2>
-                                <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text1</p>
-                            </div>
-                        </div>
-                        <div class= "slider-slide">
-                            <img src="img/slider/test1.jpg" alt="">
-                            <div class="slider-slide-text">
-                                <h2>Title 3</h2>
-                                <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text1</p>
-                            </div>
-                        </div>
-                        <div class= "slider-slide">
-                            <img src="img/slider/test1.jpg" alt="">
-                            <div class="slider-slide-text">
-                                <h2>Title 4</h2>
-                                <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text1</p>
-                            </div>
-                        </div>
-                        <div class= "slider-slide">
-                            <img src="img/slider/test1.jpg" alt="">
-                            <div class="slider-slide-text">
-                                <h2>Title 5</h2>
-                                <p>Text text Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text
-                                Text text Text text Text text Text text Text text Text text Text text Text text1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-navigation">
-                <div class="slider-navigation-item active"></div>
-                <div class="slider-navigation-item"></div>
-                <div class="slider-navigation-item"></div>
-                <div class="slider-navigation-item"></div>
-                <div class="slider-navigation-item"></div>
-            </div>
-            -->
-            
+        <div class="slider-wrap" id= "styles">
             <h1>Напрямки</h1>
             <div class="slider">
                 <div class="slider-item">
@@ -196,8 +132,73 @@
                 </div>
             </div>
         </div>
-        <div class="clear"></div>
         <!-- /.slider-wrap -->
+        <div class="schedule" id = "schedule">
+            <h1 class="schedule__title">Розклад</h1>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Пн</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item">18:00 Bachata beginners</p>
+                    <p class="schedule-box__item">19:00 Bachata intermediate</p>
+                </div>
+                
+            </div>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Вт</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item">18:30 Salsa NY beginners</p>
+                    <p class="schedule-box__item">19:30 Salsa NY intermediate</p>
+                    <p class="schedule-box__item">20:30 Twerk advance</p>
+                </div>
+                
+            </div>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Ср</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item">18:00 Bachata beginners</p>
+                    <p class="schedule-box__item">19:00 Bachata intermediate</p>
+                </div>
+                
+            </div>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Чт</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item">18:30 Salsa NY beginners</p>
+                    <p class="schedule-box__item">19:30 Salsa NY intermediate</p>
+                    <p class="schedule-box__item">20:30 Twerk advance</p>
+                </div>
+                
+            </div>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Пт</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item">18:00 Twerk intermediate</p>
+                    <p class="schedule-box__item">19:00 Salsa NY lady style</p>
+                </div>
+                
+            </div>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Сб</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item">12:00 Streching</p>
+                    <p class="schedule-box__item">17:30  Salsa NY beginners</p>
+                </div>
+                
+            </div>
+            <div class="schedule-box">
+                <h3 class="schedule-box__title">Вс</h3>
+                <div class="chedule-box__content">
+                    <p class="schedule-box__item"></p>
+                    <p class="schedule-box__item"></p>
+                </div>
+                
+            </div>
+        </div>
+        <!-- /.schedule -->
+        <div class="price" id ="price">
+
+        </div>
+        <!-- /.price -->
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptates quis, corporis ut
             officiis at, quia doloremque, repellat quo reprehenderit est aliquid qui autem fugit dolor debitis perspiciatis
             veniam ipsa.
@@ -236,7 +237,7 @@
 
     
 
-    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

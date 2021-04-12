@@ -1,3 +1,5 @@
+//........................................................... Стили для слайдера
+
 /* Устанавливаем индекс слайда по умолчанию */
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -62,4 +64,45 @@ function addClass(index){
 
     items[index-1].classList.add('current');
     
+}
+
+
+//........................................................... Стили для слайдера- конец
+
+//........................................................... Стили для Меню
+
+function showMenu (item){
+    item.classList.add("navbar-menu_active")
+}
+
+function hideMenu (item){
+    item.classList.remove("navbar-menu_active")
+}
+
+function toggleMenu(){
+    let menu = document.querySelector(".navbar-menu")
+    if(menu.classList.contains("navbar-menu_active")){
+        hideMenu(menu)
+    }else{
+        showMenu(menu)
+    }
+
+
+}
+
+//........................................................... Стили для Меню - конец
+
+//........................................................... Стили для модалки
+
+function showModal(){
+
+    let elem = document.querySelector(".action-modal")
+    elem.classList.remove("hidden")
+}
+
+
+function hideModal(){
+
+    let elem = document.querySelector(".action-modal")
+    elem.classList.add("hidden")
 }

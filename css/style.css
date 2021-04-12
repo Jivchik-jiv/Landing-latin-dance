@@ -7,6 +7,10 @@
   margin: auto;
 }
 
+.main {
+  padding-top: 70px;
+}
+
 .hidden {
   display: none;
 }
@@ -33,6 +37,14 @@ body {
   margin: auto;
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #000000;
+  min-height: 70px;
+}
 .header-wrap {
   display: flex;
   justify-content: space-between;
@@ -47,7 +59,7 @@ body {
   display: flex;
 }
 .navbar-phone-number {
-  margin: 15px;
+  margin: 20px 10px;
   display: none;
 }
 .navbar-phone-number__link {
@@ -61,7 +73,7 @@ body {
   display: none;
 }
 .navbar-social__link {
-  margin: 15px 7px;
+  margin: 20px 7px;
 }
 .navbar-social__img {
   width: 20px;
@@ -70,12 +82,13 @@ body {
   position: fixed;
   top: 54px;
   left: 0;
+  z-index: 1;
   width: 100%;
-  z-index: 0;
-  transform: translateY(-200%);
+  transform: translateX(200%);
+  transition: 0.7s;
 }
 .navbar-menu_active {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .navbar-menu__nav {
   background-color: #000000;
@@ -87,7 +100,7 @@ body {
 .navbar-menu__link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 1em;
   color: #e45dcd;
   margin-top: 10px;
   text-align: right;
@@ -112,13 +125,13 @@ body {
   margin: 2px 0;
 }
 
-@media (min-width: 610px) {
+@media (min-width: 790px) {
   .navbar-menu {
     z-index: 0;
     position: relative;
     top: 0;
     left: 0;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   .navbar-menu__nav {
     flex-direction: row;
@@ -138,12 +151,12 @@ body {
     justify-content: space-between;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .navbar-phone-number {
     display: block;
   }
 }
-@media (min-width: 925px) {
+@media (min-width: 1100px) {
   .navbar-social {
     display: flex;
   }
@@ -180,12 +193,20 @@ body {
 .action-modal {
   position: absolute;
   top: 30px;
-  left: 30px;
+  right: 30px;
   width: 250px;
   height: 100px;
   border: #fff solid 1px;
   background: #000000;
   padding: 10px 20px;
+}
+.action-modal__hide-button {
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 90%;
 }
 
 @media (min-width: 610px) {
@@ -261,7 +282,7 @@ body {
 .slider-navigation {
   display: flex;
   width: 80px;
-  margin: auto;
+  margin: 0 auto 15px;
 }
 .slider-navigation-item {
   width: 10px;
@@ -269,6 +290,7 @@ body {
   margin: 5px 3px;
   border-radius: 100%;
   background-color: #ffffff;
+  margin-bottom: 10px;
 }
 .slider-navigation-item.current {
   background-color: #e45dcd;
@@ -291,4 +313,27 @@ body {
   to {
     opacity: 1;
   }
+}
+.schedule {
+  background: linear-gradient(180deg, #20f1fa 0%, #00acff 100%);
+  color: #000000;
+  padding-top: 5px;
+}
+.schedule__title {
+  text-align: center;
+  margin-top: 5px;
+}
+.schedule-box {
+  display: flex;
+  border-top: 2px solid #000;
+}
+.schedule-box:nth-of-type(even) {
+  background: linear-gradient(180deg, #f9fa20 0%, #ff9500 100%);
+}
+.schedule-box__title {
+  padding: 20px;
+  margin: 0;
+  width: 20%;
+  margin: 10px 50px 10px 20px;
+  border-right: 2px solid #000;
 }/*# sourceMappingURL=style.css.map */
