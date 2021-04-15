@@ -353,13 +353,13 @@ body {
   text-align: right;
 }
 
-.price h1 {
-  text-align: center;
-}
-.price-items-wrap {
-  background: linear-gradient(180deg, #8b8b8c 0%, #212026 100%);
+.price {
   padding: 20px 0;
   box-shadow: 0 0 5px 5px #31313d;
+  margin: 20px;
+}
+.price h1 {
+  text-align: center;
 }
 .price-item {
   width: 70%;
@@ -374,9 +374,10 @@ body {
   background: linear-gradient(270deg, #95a8e5 0%, #7889c1 100%);
 }
 .price-attention {
+  width: 90%;
   background: linear-gradient(180deg, #ff81c8 0%, #ff0090 100%);
   padding: 5px 10px;
-  margin: 10px 0;
+  margin: 10px auto;
   color: #000;
   text-align: center;
   font-size: 1.3em;
@@ -398,7 +399,6 @@ body {
   background-color: #ff1ead;
 }
 .price-rulles {
-  background: linear-gradient(180deg, #646464 0%, #212026 100%);
   color: #fff;
   padding: 10px 15px;
   font-weight: bold;
