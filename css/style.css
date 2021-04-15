@@ -191,8 +191,8 @@ body {
   background-color: #ff1ead;
 }
 .action-modal {
-  position: absolute;
-  top: 30px;
+  position: fixed;
+  top: 20%;
   right: 30px;
   width: 250px;
   height: 100px;
@@ -319,21 +319,87 @@ body {
   color: #000000;
   padding-top: 5px;
 }
-.schedule__title {
+.schedule-title {
   text-align: center;
-  margin-top: 5px;
+  border-bottom: 2px solid #000;
 }
 .schedule-box {
-  display: flex;
-  border-top: 2px solid #000;
+  width: 90%;
+  margin: auto;
 }
-.schedule-box:nth-of-type(even) {
+.schedule-box__level-box {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  border-bottom: 2px solid #000;
+}
+.schedule-box__level-box:last-of-type {
+  border-bottom: none;
+}
+.schedule-box__style {
   background: linear-gradient(180deg, #f9fa20 0%, #ff9500 100%);
 }
-.schedule-box__title {
-  padding: 20px;
-  margin: 0;
-  width: 20%;
-  margin: 10px 50px 10px 20px;
-  border-right: 2px solid #000;
+.schedule-box__style h2 {
+  padding: 5px 10px;
+}
+.schedule-box__attention p {
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #f00;
+  font-size: 0.7em;
+  text-align: center;
+}
+.schedule-box__trainers {
+  text-align: right;
+}
+
+.price h1 {
+  text-align: center;
+}
+.price-items-wrap {
+  background: linear-gradient(180deg, #8b8b8c 0%, #212026 100%);
+  padding: 20px 0;
+  box-shadow: 0 0 5px 5px #31313d;
+}
+.price-item {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding: 5px 10px;
+  background: linear-gradient(90deg, #95a8e5 0%, #7889c1 100%);
+  color: #000;
+  font-weight: bold;
+}
+.price-item:nth-of-type(even) {
+  background: linear-gradient(270deg, #95a8e5 0%, #7889c1 100%);
+}
+.price-attention {
+  background: linear-gradient(180deg, #ff81c8 0%, #ff0090 100%);
+  padding: 5px 10px;
+  margin: 10px 0;
+  color: #000;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.price-attention__button {
+  padding: 7px 20px;
+  outline: 0;
+  color: #ffffff;
+  background-color: #000000;
+  border: solid 4px #ffffff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  transition: box-shadow 150ms ease-out, background-color 100ms ease-out;
+}
+.price-attention__button:focus {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+.price-attention__button:active {
+  background-color: #ff1ead;
+}
+.price-rulles {
+  background: linear-gradient(180deg, #646464 0%, #212026 100%);
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

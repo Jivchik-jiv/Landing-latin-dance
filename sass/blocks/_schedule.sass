@@ -2,22 +2,37 @@
     background: linear-gradient(180deg, rgba(32,241,250,1) 0%, rgba(0,172,255,1) 100%)
     color: #000000
     padding-top: 5px 
-    &__title
+    &-title
         text-align: center
-        margin-top: 5px
+        border-bottom: 2px solid #000
     &-box
-        display: flex
-        border-top: 2px solid #000
-        &:nth-of-type(even)
+        width: 90%
+        margin: auto
+        &__levels-wrap
+        &__level-box
+            display: grid
+            grid-template-columns: 2fr 2fr 1fr 1fr
+            border-bottom: 2px solid #000
+            &:last-of-type
+                border-bottom: none
+                
+
+        &__style
             background: linear-gradient(180deg, rgba(249,250,32,1) 0%, rgba(255,149,0,1) 100%)
-        &__title
-            padding: 20px
-            margin: 0
-            width: 20%
-            margin: 10px 50px 10px 20px 
-            border-right: 2px solid #000
+            & h2
+                padding: 5px 10px
+        &__attention
             
-        
+            & p
+                padding: 3px
+                background-color: #fff
+                border-radius: 10px
+                color: #f00
+                font-size: .7em
+                text-align: center
+        &__trainers
+            text-align: right
             
-            
-        
+
+
+
