@@ -1,0 +1,43 @@
+.contacts
+    
+    text-align: center
+    &-phone-number
+        &__link
+            color: #fff
+            background: url("../../img/icons/phone-icon.png") no-repeat
+            background-size: 20px
+            padding-left: 25px
+            text-decoration: none
+    &-social
+        &__link
+            margin:20px 7px 
+        &__img
+            width: 40px
+    &-address
+        width: 100%
+        &__map
+            border: none
+            width: 100%
+            min-height: 200px
+
+@media (min-width: 500px)
+    .contacts
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        &-title
+            width: 100%
+        &-social
+            width: 50%
+        &-phone-number
+            width: 50%
+
+
+@media (min-width: 850px)
+    .contacts
+        &-social
+            width: 25%
+        &-phone-number
+            width: 25%
+        &-address
+            width: 50%

@@ -106,3 +106,31 @@ function hideModal(){
     let elem = document.querySelector(".action-modal")
     elem.classList.add("hidden")
 }
+
+//........................................................... Стили для модалки- конец
+
+//........................................................... Стили для Вопросов/ Ответов
+
+function toggleAnswer(event) {
+    
+    let item = event.target.closest(".qa-question-item").querySelector(".qa-answer");
+    let button = event.target.closest(".qa-question-item").querySelector(".qa-question__button");
+    if(item.classList.contains("hidden")){
+        item.classList.remove("hidden")
+        button.innerHTML = "&#9207;";
+        
+        
+    } else{
+        item.classList.add("hidden")
+        button.innerHTML = "&#9205;";
+    }
+    
+
+    
+    
+}
+
+
+
+
+
