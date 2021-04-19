@@ -235,8 +235,6 @@ iframe {
   }
 }
 .slider-wrap {
-  box-shadow: 0 0 10px 3px #4b4b4b;
-  max-width: 90%;
   margin: auto;
 }
 .slider-wrap h1 {
@@ -259,7 +257,8 @@ iframe {
   width: 100%;
 }
 .slider-item-text {
-  padding: 10px;
+  width: 90%;
+  margin: auto;
 }
 .slider-item-text h2 {
   text-align: center;
@@ -360,26 +359,20 @@ iframe {
 
 .price {
   padding: 20px 0;
-  box-shadow: 0 0 5px 5px #31313d;
   margin: 20px;
 }
 .price h1 {
   text-align: center;
 }
 .price-item {
-  width: 70%;
   margin: auto;
   text-align: center;
   padding: 5px 10px;
-  background: linear-gradient(90deg, #95a8e5 0%, #7889c1 100%);
+  background: linear-gradient(0deg, #8293c9 0%, #7889c1 100%);
   color: #000;
   font-weight: bold;
 }
-.price-item:nth-of-type(even) {
-  background: linear-gradient(270deg, #95a8e5 0%, #7889c1 100%);
-}
 .price-attention {
-  width: 90%;
   background: linear-gradient(180deg, #ff81c8 0%, #ff0090 100%);
   padding: 5px 10px;
   margin: 10px auto;
